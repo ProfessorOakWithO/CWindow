@@ -10,7 +10,6 @@ set(SRC_GENERAL src/main.cpp)
 set(compiler_options -g -O0)
 
 if(BUILD_LINUX)
-    # set(SRC_PLATFORM src/platform/x11/x11_error.h src/platform/x11/x11_window.h src/platform/x11/x11_window.cpp src/platform/x11/x11_input.h src/platform/x11/x11_input.cpp)
     set(SRC_PLATFORM src/platform/x11/x11_window.cpp src/platform/x11/x11_input.cpp)
 elseif(BUILD_WINDOWS)
     set(SRC_PLATFORM src/platform/windows/win32_window.cpp)
