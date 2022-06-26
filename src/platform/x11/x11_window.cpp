@@ -16,7 +16,6 @@ namespace engine
 
         int error_flags = XkbOD_BadLibraryVersion | XkbOD_ConnectionRefused | XkbOD_BadServerVersion | XkbOD_NonXkbServer | XkbOD_Success;
 
-        // TODO Maybe let the user decide which display to open ?
         // Display refers to a X Server connection. Every display can have multiple screens.
         Display *display = XkbOpenDisplay((char *)0, &event, &error, &lib_major_in_out, &lib_minor_in_out, &reason);
         
@@ -139,7 +138,7 @@ namespace engine
 
     void Window::toggle_fullscreen() {
         // TODO 26.06.2022: Grab Keyboard and mouse if we switch to fullscreen.
-        // TODO 26.06.2022: What do we create "fullscreen" if the window manger doesn't support the EWMH spec ?
+        // TODO 26.06.2022: How to create "fullscreen" if the window manger doesn't support the EWMH spec ?
 
         /*
             From the Extended Window Manager Hints Spec.

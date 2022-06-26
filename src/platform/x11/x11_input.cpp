@@ -9,7 +9,7 @@ namespace engine
 
     KeycodeTranslationTable::KeycodeTranslationTable()
     {
-        // Keycodes represent physical or logical keys and lies in the range [8,255].
+        // Keycodes represent physical or logical keys and lie in the range [8,255].
         // The x11 evdev driver gets the keycode from the kernel and adds 8 to it.
         // LINUX_KEYCODE + 8 = X11 Keycode
         keycode_to_engine_key_table[9] =  KeyboardKey::KEY_ESCAPE;
