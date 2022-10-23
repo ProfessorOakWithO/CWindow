@@ -2,7 +2,8 @@
 #include <memory>
 #include "window.h"
 #include "log.h"
-
+/* unused for the moment */
+/*
 static void handle_keyboard(engine::Window& window, engine::KeyEvent const& key_event) {
 	static engine::InputState last_input_state = engine::InputState::UP;
 	switch (key_event.keycode) {
@@ -66,4 +67,12 @@ int main() {
 			}
 		}		
 	}
+}
+*/
+int main()
+{
+	std::cout << "creating window" << std::endl;
+	engine::Window* window = new engine::Window(100,100,640,640,"test");
+	window->run_window();
+	return 0;
 }
